@@ -1,2 +1,2 @@
 # LinPKG 💽
-The ~~worst~~ Best package manger for linux, written in Python!
+The ~~worst~~ **best** package manger for linux, written in Python!
