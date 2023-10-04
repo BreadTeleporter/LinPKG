@@ -8,7 +8,7 @@ import tarfile
 import os
 import urllib.request
 import shutil
-from distutils.dir_util import copy_tree
+# from distutils.dir_util import copy_tree
 import argparse
 
 # Global variables
@@ -68,7 +68,7 @@ def getAndDecompress(aname):
 # Takes Package name and returns nothing
 def installFromTemp(aname):
   # TODO: Error checking... Kinda important :)
-  copy_tree(f"{SYSROOT}/tmp/linpkg/{aname}/", f"{SYSROOT}")
+  shutil.copytree(f"{SYSROOT}/tmp/linpkg/{aname}/", f"{SYSROOT}")
 
 # Clean temp folder when we are done installing
 def cleanTemp():
