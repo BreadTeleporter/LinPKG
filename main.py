@@ -220,7 +220,7 @@ elif args.remove and args.install:
   print("Cannot install and remove at the same time, this isnt pacman :)")
 elif args.about:
   print("LinPKG v1.0.0")
-  print("<program>  Copyright (C) <year>  <name of author>")
+  print("LinPKG  Copyright (C) 2023 BreadTeleporter")
   print("This program comes with ABSOLUTELY NO WARRANTY;.")
   print("This is free software, and you are welcome to redistribute it")
   print("under certain conditions.")
