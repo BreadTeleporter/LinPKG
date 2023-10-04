@@ -14,7 +14,7 @@ import argparse
 # Global variables
 
 # Remember to change sysroot to / when finished
-SYSROOT = "sysrootTemp/"
+SYSROOT = "/"
 
 # TODO: Config file for repos
 REPO = "https://raw.githubusercontent.com/BreadTeleporter/linpkg-repo/main/"
@@ -208,11 +208,19 @@ parser.add_argument("-i", "--install", type=ascii,
                     help="install a package")
 parser.add_argument("-r", "--remove", type=ascii,
                     help="remove a package")
+parser.add_argument("--about",
+                    help="about linpkg")
 args = parser.parse_args()
 
 if args.install:
   installPackageAndDeps(args.install.replace("'", ""))
-if args.remove:
+elif args.remove:
   removePackage(args.remove.replace("'", ""))
-if args.remove and args.install:
+elif args.remove and args.install:
   print("Cannot install and remove at the same time, this isnt pacman :)")
+elif args.about:
+  print("LinPKG v1.0.0")
+  print("<program>  Copyright (C) <year>  <name of author>")
+  print("This program comes with ABSOLUTELY NO WARRANTY;.")
+  print("This is free software, and you are welcome to redistribute it")
+  print("under certain conditions.")
